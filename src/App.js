@@ -1,23 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import { MainBlock } from './components';
+import { TryContainer } from './components';
+import { FormContainer } from './components';
+import { FormButton } from './components';
+import { Form } from './components';
+import { errorMessage } from './components';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='grid-wrapper'>
+        <div className='grid'>
+          <div id='left-block'>
+            <MainBlock />
+          </div>
+          <div id='right-block'>
+            <TryContainer />
+            <div>
+              <Form />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
